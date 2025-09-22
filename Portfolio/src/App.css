@@ -111,3 +111,82 @@ body {
 	padding: 4rem;
 	text-align: center;
 }
+/* Add below your existing styles in App.css */
+
+.about-section {
+	background: #111217;
+	color: #fff;
+	padding: 4rem 2rem;
+}
+
+.about-grid {
+	display: flex;
+	gap: 3rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+
+.about-left,
+.about-right {
+	flex: 1 1 350px;
+	min-width: 300px;
+}
+
+.about-avatar img {
+	width: 60%;
+}
+
+.about-education h2,
+.about-skills h2,
+.about-languages h2,
+.about-softwares h2 {
+	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.about-years {
+	display: inline-block;
+	background: #222;
+	padding: 0.3rem 1rem;
+	border-radius: 1rem;
+	margin-top: 0.5rem;
+	font-weight: bold;
+}
+
+.about-skills ul,
+.about-languages ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.about-skills ul li,
+.about-languages ul li {
+	margin-bottom: 0.4rem;
+	font-size: 1rem;
+}
+
+.about-right h1 {
+	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
+	font-size: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.about-softwares .software-icons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.7rem;
+	margin-top: 0.5rem;
+}
+
+.about-softwares .software-icons span {
+	background: #222;
+	padding: 0.5rem 1rem;
+	border-radius: 0.7rem;
+	font-weight: bold;
+	font-size: 1.1rem;
+	color: #fff;
+	letter-spacing: 1px;
+}

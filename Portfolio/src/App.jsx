@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css"; // Create this file for custom styles
 
 import Home from "./Home";
+import About from "./About";
+
 function App() {
 	return (
 		<div>
@@ -27,8 +29,8 @@ function App() {
 			</nav>
 
 			<Home />
+			<About />
 
-			
 			{/* Branding Section */}
 			<section id="branding" className="section">
 				<h2>Branding</h2>

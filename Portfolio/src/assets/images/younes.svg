@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 250 250">
+  <defs>
+    <radialGradient id="radial-gradient" cx="125" cy="125" fx="125" fy="125" r="125" gradientUnits="userSpaceOnUse">
+      <stop offset=".33" stop-color="#5451f3"/>
+      <stop offset=".73" stop-color="#000"/>
+    </radialGradient>
+    <clipPath id="clippath">
+      <circle cx="125" cy="125" r="125" fill="url(#radial-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <circle cx="125" cy="125" r="125" fill="url(#radial-gradient)"/>
+      <g clip-path="url(#clippath)">
+        <image width="3556" height="2686" transform="translate(-177.94 -54.51) scale(.16)" xlink:href="../portfolio foto final.png"/>
+      </g>
+    </g>
+  </g>
+</svg>
