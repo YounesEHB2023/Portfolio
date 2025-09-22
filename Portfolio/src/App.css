@@ -1,69 +1,113 @@
-@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
-
-body,
-.portfolio-bg {
-	height: 100vh;
+body {
 	margin: 0;
-	background: #111217;
+	font-family: Arial, sans-serif;
+	scroll-behavior: smooth; /* enables smooth scrolling */
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: #111;
+	padding: 1rem;
+	z-index: 1000;
+}
+
+.navbar ul {
+	list-style: none;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	gap: 2rem;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.navbar a:hover {
+	color: #00aced;
+}
+
+.portfolio-bg {
 	position: relative;
-	font-family: "Luckiest Guy", cursive;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #111217;
+	color: white;
+	text-align: center;
+	padding: 2rem;
+	overflow: hidden;
+}
+
+.image {
+	position: absolute;
+	opacity: 0.85;
+	pointer-events: none;
+}
+
+/* Position each image uniquely */
+.image:nth-of-type(1) {
+	/* Long shape (top right) */
+	top: 0;
+	left: 920px;
+	width: 55%;
+	height: auto;
+	rotate: -9deg;
+	bottom: 200px;
+}
+
+.image:nth-of-type(2) {
+	/* Arrow (bottom right) */
+	top: 500px;
+	right: 250px;
+	bottom: 40px;
+	width: 10%;
+	height: auto;
+}
+
+.image:nth-of-type(3) {
+	/* Star (top left) */
+	top: 90px;
+	left: 240px;
+	width: 10%;
+	height: auto;
+}
+
+.image:nth-of-type(4) {
+	/* Coin (bottom left) */
+	left: 240px;
+	bottom: 60px;
+	width: 10%;
+	top: 500px;
+	height: auto;
 }
 
 .portfolio-content {
-	text-align: center;
-	color: #fff;
+	position: relative;
+	z-index: 2;
+	width: 100%;
 }
 
 .portfolio-content h1 {
 	font-size: 3rem;
+	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
 	margin-bottom: 2rem;
 }
 
 .portfolio-content h2 {
 	font-size: 2rem;
 	font-weight: bold;
+	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
 }
 
-/* Example decorative shapes */
-.star,
-.curve,
-.oval,
-.arrow {
-	position: absolute;
-	opacity: 0.7;
-}
-
-.star {
-	top: 40px;
-	left: 60px;
-	width: 60px;
-	height: 60px;
-	background: url("/star.png") no-repeat center/contain;
-}
-
-.curve {
-	top: 0;
-	right: 0;
-	width: 300px;
-	height: 120px;
-	background: url("/curve.png") no-repeat center/contain;
-}
-
-.oval {
-	left: 40px;
-	bottom: 60px;
-	width: 80px;
-	height: 40px;
-	background: url("/oval.png") no-repeat center/contain;
-}
-
-.arrow {
-	right: 60px;
-	bottom: 40px;
-	width: 60px;
-	height: 60px;
-	background: url("/arrow.png") no-repeat center/contain;
+.section {
+	height: 100vh;
+	padding: 4rem;
+	text-align: center;
 }
