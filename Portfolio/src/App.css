@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+body,
+.portfolio-bg {
+	height: 100vh;
+	margin: 0;
+	background: #111217;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	font-family: "Luckiest Guy", cursive;
+}
+
+.portfolio-content {
+	text-align: center;
+	color: #fff;
+}
+
+.portfolio-content h1 {
+	font-size: 3rem;
+	margin-bottom: 2rem;
+}
+
+.portfolio-content h2 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+/* Example decorative shapes */
+.star,
+.curve,
+.oval,
+.arrow {
+	position: absolute;
+	opacity: 0.7;
+}
+
+.star {
+	top: 40px;
+	left: 60px;
+	width: 60px;
+	height: 60px;
+	background: url("/star.png") no-repeat center/contain;
+}
+
+.curve {
+	top: 0;
+	right: 0;
+	width: 300px;
+	height: 120px;
+	background: url("/curve.png") no-repeat center/contain;
+}
+
+.oval {
+	left: 40px;
+	bottom: 60px;
+	width: 80px;
+	height: 40px;
+	background: url("/oval.png") no-repeat center/contain;
+}
+
+.arrow {
+	right: 60px;
+	bottom: 40px;
+	width: 60px;
+	height: 60px;
+	background: url("/arrow.png") no-repeat center/contain;
+}
