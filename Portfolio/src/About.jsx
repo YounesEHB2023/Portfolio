@@ -5,7 +5,7 @@ import cube from "./assets/images/shape_cube.png";
 import Long from "./assets/images/ShapeLong.png";
 import long2 from "./assets/images/LongShape2.png";
 import star from "./assets/images/shape_otherstar.png";
-
+import softwares from "./assets/images/softwares.png";
 function About() {
 	return (
 		<section className="about-section">
@@ -86,18 +86,7 @@ function About() {
 							<h2>Softwares</h2>
 						</div>
 						<div className="software-icons">
-							<span>Ps</span>
-							<span>Ai</span>
-							<span>Ae</span>
-							<span>Pr</span>
-							<span>VS</span>
-							<span>JS</span>
-							<span>Id</span>
-							<span>Xd</span>
-							<span>Figma</span>
-							<span>Blender</span>
-							<span>HTML</span>
-							<span>CSS</span>
+							<img src={softwares} alt="Star" className="software" />
 						</div>
 					</div>
 				</div>

@@ -5,6 +5,7 @@ import Home from "./Home";
 import About from "./About";
 import Branding from "./Branding";
 import UiUx from "./UiUx";
+import Coding from "./coding";
 function App() {
 	return (
 		<div>
@@ -33,6 +34,7 @@ function App() {
 			<About />
 			<Branding />
 			<UiUx />
+			<Coding />
 			{/* UI/UX Section */}
 
 			{/* Coding Section */}

@@ -6,7 +6,7 @@ import "./App.css";
 import uiux1 from "./assets/images/grow.png";
 import uiux2 from "./assets/images/design.png";
 import uiux3 from "./assets/images/fullprojects.png";
-
+import uiux from "./assets/images/uiux.png";
 function PhoneCard({ image, title, description }) {
 	const [props, set] = useSpring(() => ({
 		transform: "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)",
@@ -47,6 +47,7 @@ function UiUx() {
 	return (
 		<section className="branding-section" id="uiux">
 			<div className="branding-bg">
+				<img src={uiux} alt="Curve" className="ui-bg" />
 				<h2 className="branding-title">UI/UX Projects</h2>
 				<div className="ui-projects">
 					<PhoneCard
