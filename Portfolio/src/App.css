@@ -479,3 +479,78 @@ body {
 	line-height: 1.5;
 	margin-top: 0.5rem;
 }
+/* 3D Section */
+.threeD-section {
+	background: #111217;
+	padding: 6rem 2rem;
+	text-align: center;
+	color: #fff;
+}
+
+.threeD-title {
+	font-size: 3rem;
+	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
+	margin-bottom: 4rem;
+}
+
+/* Grid for 3D projects (2 items) */
+.threeD-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 3rem;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+/* Each 3D project card */
+.threeD-card {
+	background: rgba(24, 26, 43, 0.9);
+	border-radius: 1.5rem;
+	padding: 2rem 1rem;
+	box-shadow: 0 6px 28px rgba(0, 0, 0, 0.4);
+	transition: box-shadow 0.3s ease;
+}
+
+.threeD-card:hover {
+	box-shadow: 0 12px 40px rgba(0, 162, 237, 0.6);
+}
+
+.threeD-img {
+	width: 100%;
+	max-width: 420px;
+	height: auto;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.threeD-card h3 {
+	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
+	font-size: 1.4rem;
+	margin-top: 0.5rem;
+}
+
+.threeD-desc {
+	color: #bbb;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	margin-top: 0.5rem;
+}
+
+/* Tools badges */
+.threeD-tools {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+	gap: 0.6rem;
+	flex-wrap: wrap;
+}
+
+.threeD-tools span {
+	background: #20199b;
+	color: #fff;
+	padding: 0.4rem 0.8rem;
+	border-radius: 0.7rem;
+	font-size: 0.9rem;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+}

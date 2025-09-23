@@ -6,6 +6,7 @@ import About from "./About";
 import Branding from "./Branding";
 import UiUx from "./UiUx";
 import Coding from "./coding";
+import ThreeD from "./ThreeD";
 function App() {
 	return (
 		<div>
@@ -35,14 +36,7 @@ function App() {
 			<Branding />
 			<UiUx />
 			<Coding />
-			{/* UI/UX Section */}
-
-			{/* Coding Section */}
-			<section id="coding" className="section">
-				<h2>Coding</h2>
-				<p>Showcase your coding projects here.</p>
-			</section>
-
+			<ThreeD />
 			{/* 3D Section */}
 			<section id="3d" className="section">
 				<h2>3D</h2>
