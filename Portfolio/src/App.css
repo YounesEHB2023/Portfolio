@@ -304,17 +304,18 @@ body {
 .branding-projects {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem;
+	gap: 5rem;
 	max-width: 1200px;
-	margin: 0 auto;
+	margin: 60px auto 0 auto;
 }
 
 .branding-project {
 	background: #181a2b;
 	border-radius: 1.2rem;
-	box-shadow: 0 4px 32px #2224;
-	padding: 2rem 1rem;
+	box-shadow: 0 4px 32px rgba(8, 0, 255, 0.267);
+	padding: 7rem 1rem;
 	text-align: center;
+	margin-bottom: 8vh;
 }
 
 .project-img {
@@ -353,4 +354,62 @@ body {
 	font-weight: bold;
 	font-size: 1rem;
 	letter-spacing: 1px;
+}
+.ui-bg {
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+	opacity: 0.4;
+	top: -30vh;
+}
+/* Phone project grid */
+.ui-projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 4rem;
+	justify-items: center;
+	margin-top: 5rem;
+	width: 100%;
+	max-width: 1200px;
+}
+
+/* Individual phone card */
+.phone-card {
+	background: rgba(24, 26, 43, 0.9);
+	border-radius: 1.5rem;
+	padding: 2rem 1rem;
+	text-align: center;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+	transition: box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+.phone-card:hover {
+	box-shadow: 0 12px 40px rgba(0, 162, 237, 0.6);
+}
+
+/* Phone image */
+.phone-img {
+	width: 100%;
+	max-width: 260px;
+	height: auto;
+	margin-bottom: 1rem;
+	border-radius: 1rem;
+}
+
+/* Phone title */
+.phone-card h3 {
+	color: #fff;
+	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
+	font-size: 1.2rem;
+	margin-top: 0.5rem;
+}
+
+/* Phone description */
+.phone-desc {
+	color: #bbb;
+	font-size: 0.95rem;
+	line-height: 1.4;
+	margin-top: 0.5rem;
+	padding: 0 0.5rem;
 }

@@ -4,6 +4,7 @@ import "./App.css"; // Create this file for custom styles
 import Home from "./Home";
 import About from "./About";
 import Branding from "./Branding";
+import UiUx from "./UiUx";
 function App() {
 	return (
 		<div>
@@ -30,13 +31,9 @@ function App() {
 
 			<Home />
 			<About />
-
 			<Branding />
+			<UiUx />
 			{/* UI/UX Section */}
-			<section id="uiux" className="section">
-				<h2>UI/UX</h2>
-				<p>Showcase your UI/UX projects here.</p>
-			</section>
 
 			{/* Coding Section */}
 			<section id="coding" className="section">
