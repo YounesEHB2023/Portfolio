@@ -140,9 +140,8 @@ body {
 	width: 320px;
 	height: 320px;
 	border-radius: 50%;
-	display: block;
 	margin: 0 auto 2rem auto;
-	z-index: 1;
+	z-index: 2;
 }
 .about-avatar .MeUnderPicture {
 	width: 110vh;
@@ -150,8 +149,8 @@ body {
 	position: absolute;
 	top: 132vh;
 	right: 30vw;
-	z-index: 1;
-	opacity: 0.5;
+	z-index: -1;
+	opacity: 0.1;
 	rotate: -2deg;
 }
 .cube {
@@ -216,7 +215,7 @@ body {
 }
 
 .about-softwares .software-icons span {
-	background: #222;
+	background: #20199b;
 	padding: 0.5rem 1rem;
 	border-radius: 0.7rem;
 	font-weight: bold;
@@ -257,4 +256,101 @@ body {
 	border-radius: 50%;
 	display: block;
 	margin: 0 auto 2rem auto;
+}
+
+.branding-section {
+	position: relative;
+	padding: 0;
+	background: #111217;
+	color: #fff;
+}
+
+.branding-bg {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 150vh;
+	overflow: hidden;
+	margin: 0;
+	height: 100vh;
+	background: radial-gradient(
+		circle at center,
+		#3d3dff 0%,
+		#000020 60%,
+		#000 100%
+	);
+}
+
+.branding-curve {
+	position: absolute;
+	right: 120vh;
+	top: 35%;
+	width: 100%;
+	max-width: 800px;
+	z-index: 1;
+	opacity: 0.8;
+}
+
+.branding-title {
+	position: relative;
+	z-index: 2;
+	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
+	font-size: 4rem;
+	text-align: center;
+	margin: 0;
+}
+
+.branding-projects {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.branding-project {
+	background: #181a2b;
+	border-radius: 1.2rem;
+	box-shadow: 0 4px 32px #2224;
+	padding: 2rem 1rem;
+	text-align: center;
+}
+
+.project-img {
+	width: 100%;
+	max-width: 300px;
+	height: 180px;
+	object-fit: cover;
+	border-radius: 0.8rem;
+	margin-bottom: 1rem;
+	background: #222;
+}
+
+.branding-project h3 {
+	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
+	font-size: 1.5rem;
+	margin: 1rem 0 0.5rem 0;
+}
+
+.branding-project p {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+}
+
+.project-programs {
+	display: flex;
+	justify-content: center;
+	gap: 0.7rem;
+	flex-wrap: wrap;
+}
+
+.project-programs span {
+	background: #20199b;
+	color: #fff;
+	padding: 0.4rem 1rem;
+	border-radius: 0.7rem;
+	font-weight: bold;
+	font-size: 1rem;
+	letter-spacing: 1px;
 }

@@ -3,7 +3,7 @@ import "./App.css"; // Create this file for custom styles
 
 import Home from "./Home";
 import About from "./About";
-
+import Branding from "./Branding";
 function App() {
 	return (
 		<div>
@@ -31,12 +31,7 @@ function App() {
 			<Home />
 			<About />
 
-			{/* Branding Section */}
-			<section id="branding" className="section">
-				<h2>Branding</h2>
-				<p>Showcase your branding projects here.</p>
-			</section>
-
+			<Branding />
 			{/* UI/UX Section */}
 			<section id="uiux" className="section">
 				<h2>UI/UX</h2>
