@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	font-family: Arial, sans-serif;
 	scroll-behavior: smooth; /* enables smooth scrolling */
+	background: #111217;
 }
 
 .navbar {
@@ -38,7 +39,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #111217;
 	color: white;
 	text-align: center;
 	padding: 2rem;
@@ -54,7 +54,6 @@ body {
 /* Position each image uniquely */
 .image:nth-of-type(1) {
 	/* Long shape (top right) */
-	top: 0;
 	left: 920px;
 	width: 55%;
 	height: auto;
@@ -114,7 +113,6 @@ body {
 /* Add below your existing styles in App.css */
 
 .about-section {
-	background: #111217;
 	color: #fff;
 	padding: 4rem 2rem;
 }
@@ -132,9 +130,46 @@ body {
 	flex: 1 1 350px;
 	min-width: 300px;
 }
-
+.about-right {
+	margin-top: 50px;
+}
 .about-avatar img {
-	width: 60%;
+	width: 0%;
+}
+.about-avatar .avatarMe {
+	width: 320px;
+	height: 320px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto 2rem auto;
+	z-index: 1;
+}
+.about-avatar .MeUnderPicture {
+	width: 110vh;
+	height: 110vh;
+	position: absolute;
+	top: 132vh;
+	right: 30vw;
+	z-index: 1;
+	opacity: 0.5;
+	rotate: -2deg;
+}
+.cube {
+	width: 20%;
+	position: absolute;
+	top: 95vh;
+	left: 9vw;
+	z-index: 2;
+	opacity: 0.5;
+}
+.long2 {
+	width: 40%;
+	position: absolute;
+	top: 130vh;
+	right: 5px;
+	z-index: 2;
+	opacity: 0.2;
+	rotate: -90deg;
 }
 
 .about-education h2,
@@ -148,7 +183,6 @@ body {
 
 .about-years {
 	display: inline-block;
-	background: #222;
 	padding: 0.3rem 1rem;
 	border-radius: 1rem;
 	margin-top: 0.5rem;
@@ -189,4 +223,38 @@ body {
 	font-size: 1.1rem;
 	color: #fff;
 	letter-spacing: 1px;
+}
+
+.h2-star {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	margin-bottom: 0.5rem;
+}
+
+.star-icon {
+	width: 28px;
+	height: 28px;
+	margin-top: 15px;
+	vertical-align: middle;
+}
+
+.skills-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.2rem 2rem;
+}
+
+.about-left {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.about-avatar img {
+	width: 260px;
+	height: 260px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto 2rem auto;
 }

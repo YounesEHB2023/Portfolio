@@ -1,17 +1,28 @@
 import React from "react";
 import "./App.css";
 import Me from "./assets/images/younes2.png";
+import cube from "./assets/images/shape_cube.png";
+import Long from "./assets/images/ShapeLong.png";
+import long2 from "./assets/images/LongShape2.png";
+import star from "./assets/images/shape_otherstar.png";
+
 function About() {
 	return (
 		<section className="about-section">
+			<img className="cube" src={cube} alt="Cube Shape" />
+			<img className="long2" src={long2} alt="Long Shape" />
+
 			<div className="about-grid">
 				<div className="about-left">
 					<div className="about-avatar">
-						{/* Placeholder image */}
-						<img src={Me} alt="Long Shape" />
+						<img className="avatarMe" src={Me} alt="Avatar" />
+						<img className="MeUnderPicture" src={Long} alt="Long Shape" />
 					</div>
 					<div className="about-education">
-						<h2>Education</h2>
+						<div className="h2-star">
+							<img src={star} alt="Star" className="star-icon" />
+							<h2>Education</h2>
+						</div>
 						<p>
 							Multimedia and Creative Technology student at Erasmus College at
 							Campus Kaai in Brussels
@@ -19,8 +30,11 @@ function About() {
 						<span className="about-years">2023-2026</span>
 					</div>
 					<div className="about-skills">
-						<h2>Skills</h2>
-						<ul>
+						<div className="h2-star">
+							<img src={star} alt="Star" className="star-icon" />
+							<h2>Skills</h2>
+						</div>
+						<ul className="skills-list">
 							<li>Creative</li>
 							<li>Organized</li>
 							<li>Adaptable</li>
@@ -47,7 +61,10 @@ function About() {
 						coding ideas to life in a way that truly stands out!
 					</p>
 					<div className="about-languages">
-						<h2>Languages</h2>
+						<div className="h2-star">
+							<img src={star} alt="Star" className="star-icon" />
+							<h2>Languages</h2>
+						</div>
 						<ul>
 							<li>
 								Dutch <span>⭐⭐⭐⭐⭐</span>
@@ -64,9 +81,11 @@ function About() {
 						</ul>
 					</div>
 					<div className="about-softwares">
-						<h2>Softwares</h2>
+						<div className="h2-star">
+							<img src={star} alt="Star" className="star-icon" />
+							<h2>Softwares</h2>
+						</div>
 						<div className="software-icons">
-							{/* Placeholder icons */}
 							<span>Ps</span>
 							<span>Ai</span>
 							<span>Ae</span>
