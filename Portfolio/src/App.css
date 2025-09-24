@@ -554,3 +554,51 @@ body {
 	font-weight: bold;
 	letter-spacing: 0.5px;
 }
+/* Shared hover glow for all cards */
+.branding-project:hover,
+.phone-card:hover,
+.coding-card:hover,
+.threeD-card:hover {
+	box-shadow: 0 12px 40px rgba(0, 162, 237, 0.6);
+	transform: translateY(-5px);
+	transition: all 0.3s ease;
+}
+
+/* Coding tools badges */
+.coding-tools {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+	gap: 0.6rem;
+	flex-wrap: wrap;
+}
+
+.coding-tools span {
+	background: #20199b;
+	color: #fff;
+	padding: 0.4rem 0.8rem;
+	border-radius: 0.7rem;
+	font-size: 0.9rem;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+}
+
+/* Ensure 3D tools badges are consistent */
+.threeD-tools span {
+	background: #20199b;
+	color: #fff;
+	padding: 0.4rem 0.8rem;
+	border-radius: 0.7rem;
+	font-size: 0.9rem;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	display: inline-block;
+}
+
+/* Smooth transitions on cards */
+.branding-project,
+.phone-card,
+.coding-card,
+.threeD-card {
+	transition: all 0.3s ease-in-out;
+}

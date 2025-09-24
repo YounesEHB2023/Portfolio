@@ -37,11 +37,6 @@ function App() {
 			<UiUx />
 			<Coding />
 			<ThreeD />
-			{/* 3D Section */}
-			<section id="3d" className="section">
-				<h2>3D</h2>
-				<p>Showcase your 3D projects here.</p>
-			</section>
 
 			{/* Contact Section */}
 			<section id="contact" className="section">

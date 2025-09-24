@@ -1,11 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useSpring, animated } from "@react-spring/web";
-import "./App.css";
-
-// Import your 2 3D project images
 import threeD1 from "./assets/images/house.jpg";
 import threeD2 from "./assets/images/patrick.jpg";
+import "./App.css";
 
 function ThreeDCard({ image, title, description, tools }) {
 	const [props, set] = useSpring(() => ({
@@ -49,7 +47,14 @@ function ThreeDCard({ image, title, description, tools }) {
 			<p className="threeD-desc">{description}</p>
 			<div className="threeD-tools">
 				{tools.map((tool, index) => (
-					<span key={index}>{tool}</span>
+					<motion.span
+						key={index}
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ delay: index * 0.2 }}
+					>
+						{tool}
+					</motion.span>
 				))}
 			</div>
 		</motion.div>
@@ -58,7 +63,7 @@ function ThreeDCard({ image, title, description, tools }) {
 
 function ThreeD() {
 	return (
-		<section className="threeD-section" id="threeD">
+		<section className="threeD-section" id="3d">
 			<motion.h2
 				className="threeD-title"
 				initial={{ opacity: 0, y: -40 }}

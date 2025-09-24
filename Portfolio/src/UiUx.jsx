@@ -14,8 +14,8 @@ function PhoneCard({ image, title, description }) {
 	}));
 
 	const calc = (x, y, rect) => [
-		-(y - rect.top - rect.height / 2) / 20,
-		(x - rect.left - rect.width / 2) / 20,
+		-(y - rect.top - rect.height / 2) / 8,
+		(x - rect.left - rect.width / 2) / 8,
 	];
 
 	const trans = (x, y) =>
