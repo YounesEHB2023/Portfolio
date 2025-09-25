@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useSpring, animated } from "@react-spring/web";
 import threeD1 from "./assets/images/house.jpg";
 import threeD2 from "./assets/images/patrick.jpg";
+import threeD3 from "./assets/images/3d.png";
 import "./App.css";
 
 function ThreeDCard({ image, title, description, tools }) {
@@ -64,6 +65,7 @@ function ThreeDCard({ image, title, description, tools }) {
 function ThreeD() {
 	return (
 		<section className="threeD-section" id="3d">
+			<img src={threeD3} alt="3D Shape" className="three-shape" />
 			<motion.h2
 				className="threeD-title"
 				initial={{ opacity: 0, y: -40 }}

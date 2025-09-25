@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { useSpring, animated } from "@react-spring/web";
 import coding1 from "./assets/images/code1.png";
 import coding2 from "./assets/images/code2.png";
+
+import Long from "./assets/images/ShapeLong.png";
+import Star from "./assets/images/arrow_shape.png";
 import "./App.css";
 
 function CodingCard({ image, title, description, tools }) {
@@ -57,6 +60,8 @@ function CodingCard({ image, title, description, tools }) {
 function Coding() {
 	return (
 		<section className="coding-section" id="coding">
+			<img className="image coding-bg-long" src={Long} alt="Long Shape" />
+			<img className="image coding-bg-star" src={Star} alt="Star Shape" />
 			<motion.h2
 				className="coding-title"
 				initial={{ opacity: 0, y: -30 }}

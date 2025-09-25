@@ -7,6 +7,7 @@ import Branding from "./Branding";
 import UiUx from "./UiUx";
 import Coding from "./coding";
 import ThreeD from "./ThreeD";
+import Contact from "./contact";
 function App() {
 	return (
 		<div>
@@ -30,19 +31,13 @@ function App() {
 					</li>
 				</ul>
 			</nav>
-
 			<Home />
 			<About />
 			<Branding />
 			<UiUx />
 			<Coding />
 			<ThreeD />
-
-			{/* Contact Section */}
-			<section id="contact" className="section">
-				<h2>Contact</h2>
-				<p>Let people reach out to you here.</p>
-			</section>
+			<Contact />
 		</div>
 	);
 }
