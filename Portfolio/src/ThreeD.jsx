@@ -78,14 +78,14 @@ function ThreeD() {
 			<div className="threeD-grid">
 				<ThreeDCard
 					image={threeD1}
-					title="Futuristic Laptop Render"
-					description="A 3D render of a modern laptop setup with glowing effects."
+					title="Modern house"
+					description="A 3D render of a modern house setup with glowing effects."
 					tools={["Blender", "Substance Painter", "Photoshop"]}
 				/>
 				<ThreeDCard
 					image={threeD2}
-					title="Stylized Scene"
-					description="A creative 3D environment inspired by storytelling concepts."
+					title="Character 3D modeling"
+					description="A 3D-model of patrick star, used in a later video animation project."
 					tools={["Cinema4D", "After Effects", "Illustrator"]}
 				/>
 			</div>

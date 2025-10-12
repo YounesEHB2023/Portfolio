@@ -74,8 +74,8 @@ function Coding() {
 			<div className="coding-grid">
 				<CodingCard
 					image={coding1}
-					title="Portfolio Website"
-					description="A fully responsive portfolio website built with React."
+					title="First fullstack Website"
+					description="A motivating fullstack website about leg excercises to not skip leg day in the gym."
 					tools={[
 						"Illustrator",
 						"Photoshop",
@@ -90,8 +90,8 @@ function Coding() {
 				/>
 				<CodingCard
 					image={coding2}
-					title="Interactive Web App"
-					description="An interactive application featuring animations and dynamic UI."
+					title="Interactive parallax Website"
+					description="An interactive website featuring animations and dynamic UI about the Alladin and the wonderlamp fairytale ."
 					tools={[
 						"Illustrator",
 						"Photoshop",

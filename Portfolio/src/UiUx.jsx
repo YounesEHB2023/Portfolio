@@ -57,13 +57,13 @@ function UiUx() {
 					/>
 					<PhoneCard
 						image={uiux2}
-						title="Journaling UI"
-						description="A journaling interface designed for simplicity, making it easy for users to brain-dump and track emotions."
+						title="Navigation App"
+						description="A application that serves as navigation for visually impaired people."
 					/>
 					<PhoneCard
 						image={uiux3}
-						title="Wireframe Design"
-						description="Low-fidelity wireframe for early user testing, focusing on navigation and user flows."
+						title="BIFFF guide"
+						description="A seperate app for the Brussels International Fantastic Film Festival (BIFFF) to help users navigate the event."
 					/>
 				</div>
 			</div>

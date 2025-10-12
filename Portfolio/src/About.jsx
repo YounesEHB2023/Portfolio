@@ -115,16 +115,22 @@ function About() {
 						</div>
 						<ul>
 							<li>
-								Dutch <span>⭐⭐⭐⭐⭐</span>
+								Dutch:
+								<strong>
+									<span>C2</span>
+								</strong>
 							</li>
 							<li>
-								English <span>⭐⭐⭐⭐</span>
+								English:
+								<strong>
+									<span>B1 / B2</span>
+								</strong>
 							</li>
 							<li>
-								French <span>⭐⭐⭐</span>
+								French: <strong><span>C2</span></strong>
 							</li>
 							<li>
-								Arabic <span>⭐⭐</span>
+								Arabic: <strong><span>A2</span></strong>
 							</li>
 						</ul>
 					</div>
