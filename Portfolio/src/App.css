@@ -530,6 +530,7 @@ body {
 	padding: 2rem 1rem;
 	box-shadow: 0 6px 28px rgba(0, 0, 0, 0.4);
 	transition: box-shadow 0.3s ease;
+	z-index: 3;
 }
 
 .threeD-card:hover {
@@ -577,11 +578,11 @@ body {
 }
 .three-shape {
 	position: absolute;
-	width: 50%;
+	width: 40%;
 	z-index: 1;
 	opacity: 0.2;
-	top: 630vh;
-	left: 0;
+	top: 703vh;
+	left: 130vh;
 }
 /* Shared hover glow for all cards */
 .branding-project:hover,
@@ -707,4 +708,360 @@ body {
 }
 #contact {
 	background-color: black;
+}
+
+/* Responsive Styles */
+/* Responsive Design - Media Queries */
+
+/* Tablets and smaller laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+	/* Navigation */
+	.navbar ul {
+		gap: 1rem;
+		font-size: 0.9rem;
+	}
+
+	/* Home section images - adjust positions */
+	.image:nth-of-type(1) {
+		left: 60vw;
+		width: 60%;
+		bottom: 150px;
+	}
+
+	.image:nth-of-type(2) {
+		right: 10vw;
+		width: 12%;
+	}
+
+	.image:nth-of-type(3) {
+		left: 15vw;
+		width: 12%;
+	}
+
+	.image:nth-of-type(4) {
+		left: 15vw;
+		width: 12%;
+	}
+
+	/* Home content */
+	.portfolio-content h1 {
+		font-size: 2.5rem;
+	}
+
+	.portfolio-content h2 {
+		font-size: 1.5rem;
+	}
+
+	/* About section */
+	.about-grid {
+		gap: 2rem;
+	}
+
+	.about-avatar .avatarMe {
+		width: 260px;
+		height: 260px;
+	}
+
+	.about-avatar .MeUnderPicture {
+		width: 80vh;
+		height: 80vh;
+		top: 120vh;
+		right: 20vw;
+	}
+
+	.cube {
+		width: 25%;
+		left: 5vw;
+	}
+
+	.long2 {
+		width: 35%;
+	}
+
+	/* Branding section */
+	.branding-title,
+	.coding-title,
+	.threeD-title {
+		font-size: 3rem;
+	}
+
+	.branding-projects {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 3rem;
+	}
+
+	.branding-curve {
+		right: 80vh;
+	}
+
+	/* UI/UX projects */
+	.ui-projects {
+		padding-right: 50px;
+		gap: 2rem;
+	}
+
+	/* 3D shape */
+	.three-shape {
+		width: 50%;
+		left: 80vh;
+	}
+}
+
+/* Tablets portrait and large phones (max-width: 768px) */
+@media (max-width: 768px) {
+	/* Navigation - make it smaller */
+	.navbar {
+		padding: 0.8rem;
+	}
+
+	.navbar ul {
+		gap: 0.8rem;
+		font-size: 0.85rem;
+		flex-wrap: wrap;
+	}
+
+	/* Home section */
+	.portfolio-bg {
+		height: 80vh;
+		padding: 1rem;
+	}
+
+	.portfolio-content h1 {
+		font-size: 2rem;
+	}
+
+	.portfolio-content h2 {
+		font-size: 1.2rem;
+	}
+
+	/* Hide decorative images on mobile */
+	.image:nth-of-type(1),
+	.image:nth-of-type(2) {
+		display: none;
+	}
+
+	.image:nth-of-type(3),
+	.image:nth-of-type(4) {
+		width: 15%;
+	}
+
+	/* About section */
+	.about-section {
+		padding: 3rem 1.5rem;
+	}
+
+	.about-grid {
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.about-left,
+	.about-right {
+		min-width: 100%;
+	}
+
+	.about-right {
+		margin-top: 20px;
+	}
+
+	.about-avatar .avatarMe {
+		width: 200px;
+		height: 200px;
+	}
+
+	.about-avatar .MeUnderPicture {
+		width: 110vh;
+		height: 110vh;
+		position: absolute;
+		top: 132vh;
+		right: 30vw;
+		z-index: -1;
+		opacity: 0.1;
+		rotate: -2deg;
+		pointer-events: none;
+	}
+
+	.cube,
+	.long2 {
+		display: none;
+	}
+
+	.skills-list {
+		grid-template-columns: 1fr;
+	}
+
+	.software {
+		width: 100%;
+		max-width: 300px;
+		position: relative;
+	}
+
+	/* Branding section */
+	.section {
+		height: auto;
+		padding: 3rem 1.5rem;
+	}
+
+	.branding-bg {
+		height: auto;
+		padding: 3rem 1.5rem;
+	}
+
+	.branding-title,
+	.coding-title,
+	.threeD-title {
+		font-size: 2.5rem;
+	}
+
+	.branding-curve {
+		display: none;
+	}
+
+	.branding-projects {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		margin-top: 40px;
+	}
+
+	.branding-project {
+		padding: 4rem 1rem;
+		margin-bottom: 4vh;
+	}
+
+	/* UI/UX section */
+	.ui-projects {
+		padding-right: 0;
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.ui-bg {
+		display: none;
+	}
+
+	/* Coding section */
+	.coding-section {
+		padding: 4rem 1.5rem;
+	}
+
+	.coding-bg-long,
+	.coding-bg-star {
+		display: none;
+	}
+
+	.coding-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	/* 3D section */
+	.threeD-section {
+		padding: 4rem 1.5rem;
+	}
+
+	.three-shape {
+		display: none;
+	}
+
+	.threeD-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	/* Contact section */
+	.contact-section {
+		padding: 3rem 1.5rem;
+	}
+
+	.contact-title {
+		font-size: 2rem;
+	}
+
+	.contact-form {
+		max-width: 100%;
+		padding: 1.5rem;
+	}
+}
+
+/* Mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+	/* Navigation */
+	.navbar ul {
+		gap: 0.5rem;
+		font-size: 0.75rem;
+	}
+
+	.navbar ul li a {
+		padding: 0.3rem;
+	}
+
+	/* Home section */
+	.portfolio-content h1 {
+		font-size: 1.8rem;
+	}
+
+	.portfolio-content h2 {
+		font-size: 1rem;
+	}
+
+	/* About section */
+	.about-avatar .avatarMe {
+		width: 180px;
+		height: 180px;
+	}
+
+	.about-avatar .MeUnderPicture {
+		width: 50vh;
+		height: 50vh;
+		top: 105vh;
+	}
+
+	.about-right h1 {
+		font-size: 2rem;
+	}
+
+	/* Branding, Coding, 3D titles */
+	.branding-title,
+	.coding-title,
+	.threeD-title {
+		font-size: 2rem;
+	}
+
+	/* Project cards */
+	.branding-project,
+	.phone-card,
+	.coding-card,
+	.threeD-card {
+		padding: 2rem 0.8rem;
+	}
+
+	.project-img,
+	.phone-img,
+	.coding-img,
+	.threeD-img {
+		max-width: 100%;
+	}
+
+	/* Contact */
+	.contact-title {
+		font-size: 1.8rem;
+	}
+
+	.contact-form {
+		padding: 1.2rem;
+	}
+}
+
+/* Large screens (min-width: 1920px) - optional enhancements */
+@media (min-width: 1920px) {
+	.about-avatar .MeUnderPicture {
+		right: 35vw;
+	}
+
+	.branding-projects,
+	.ui-projects,
+	.coding-grid,
+	.threeD-grid {
+		max-width: 1400px;
+	}
 }
