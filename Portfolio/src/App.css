@@ -8,19 +8,24 @@ body {
 .navbar {
 	position: fixed;
 	top: 0;
+	left: 0;
 	width: 100%;
 	background: #111;
 	padding: 1rem;
 	z-index: 1000;
+	display: flex;
+	justify-content: center; /* Center the navbar itself */
 }
 
 .navbar ul {
 	list-style: none;
 	display: flex;
 	justify-content: center;
+	align-items: center; /* Ensure vertical centering */
 	gap: 2rem;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 .navbar a {
@@ -794,9 +799,14 @@ body {
 	}
 
 	.navbar ul {
-		gap: 0.8rem;
-		font-size: 0.85rem;
-		flex-wrap: wrap;
+		gap: 1.2rem;
+		font-size: 1.1rem;
+		padding: 0.5rem 0;
+	}
+
+	.navbar a {
+		font-size: 1.1rem;
+		padding: 0.3rem 0.7rem;
 	}
 
 	.portfolio-bg {

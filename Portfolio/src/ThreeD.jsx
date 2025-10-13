@@ -65,7 +65,6 @@ function ThreeDCard({ image, title, description, tools }) {
 function ThreeD() {
 	return (
 		<section className="threeD-section" id="3d">
-			<img src={threeD3} alt="3D Shape" className="three-shape" />
 			<motion.h2
 				className="threeD-title"
 				initial={{ opacity: 0, y: -40 }}
