@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
-	scroll-behavior: smooth; /* enables smooth scrolling */
+	scroll-behavior: smooth;
 	background: #111217;
 }
 
@@ -33,6 +33,7 @@ body {
 	color: #00aced;
 }
 
+/* ===== HOME SECTION ===== */
 .portfolio-bg {
 	position: relative;
 	height: 100vh;
@@ -51,9 +52,7 @@ body {
 	pointer-events: none;
 }
 
-/* Position each image uniquely */
 .image:nth-of-type(1) {
-	/* Long shape (top right) */
 	left: 920px;
 	width: 55%;
 	height: auto;
@@ -62,7 +61,6 @@ body {
 }
 
 .image:nth-of-type(2) {
-	/* Arrow (bottom right) */
 	top: 500px;
 	right: 250px;
 	bottom: 40px;
@@ -71,7 +69,6 @@ body {
 }
 
 .image:nth-of-type(3) {
-	/* Star (top left) */
 	top: 90px;
 	left: 240px;
 	width: 10%;
@@ -79,7 +76,6 @@ body {
 }
 
 .image:nth-of-type(4) {
-	/* Coin (bottom left) */
 	left: 240px;
 	bottom: 60px;
 	width: 10%;
@@ -105,19 +101,14 @@ body {
 	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
 }
 
-.section {
-	height: 100vh;
-	padding: 4rem;
-	text-align: center;
-}
-/* Add below your existing styles in App.css */
-
+/* ===== ABOUT SECTION ===== */
 .about-section {
 	color: #fff;
 	padding: 4rem 2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
 }
 
 .about-grid {
@@ -134,49 +125,56 @@ body {
 	flex: 1 1 350px;
 	min-width: 300px;
 }
+
 .about-right {
 	margin-top: 50px;
 	text-align: left;
 }
+
 .about-avatar {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
 }
-.about-avatar img {
-	width: 0%;
-}
+
 .about-avatar .avatarMe {
+	width: 320px;
 	height: 320px;
 	border-radius: 50%;
 	margin: 0 auto 2rem auto;
 	z-index: 2;
 	display: block;
 }
+
 .about-avatar .MeUnderPicture {
-	width: 110vh;
-	height: 110vh;
+	width: 600px;
+	height: 600px;
 	position: absolute;
-	top: 132vh;
-	right: 30vw;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	z-index: -1;
 	opacity: 0.1;
 	rotate: -2deg;
+	pointer-events: none;
 }
+
 .cube {
-	width: 20%;
+	width: 150px;
 	position: absolute;
-	top: 95vh;
-	left: 9vw;
-	z-index: 2;
+	top: 20%;
+	left: 5%;
+	z-index: 1;
 	opacity: 0.5;
 }
+
 .long2 {
-	width: 40%;
+	width: 300px;
 	position: absolute;
-	top: 130vh;
-	right: 5px;
-	z-index: 2;
+	bottom: 10%;
+	right: 5%;
+	z-index: 1;
 	opacity: 0.2;
 	rotate: -90deg;
 }
@@ -224,19 +222,12 @@ body {
 	margin-top: 0.5rem;
 }
 
-.about-softwares .software-icons span {
-	background: #20199b;
-	padding: 0.5rem 1rem;
-	border-radius: 0.7rem;
-	font-weight: bold;
-	font-size: 1.1rem;
-	color: #fff;
-	letter-spacing: 1px;
-}
 .software {
-	width: 50vh;
-	position: absolute;
+	width: 100%;
+	max-width: 400px;
+	position: relative;
 }
+
 .h2-star {
 	display: flex;
 	align-items: center;
@@ -263,10 +254,7 @@ body {
 	align-items: flex-start;
 }
 
-.about-avatar img {
-	width: 100%;
-}
-
+/* ===== BRANDING SECTION ===== */
 .branding-section {
 	position: relative;
 	padding: 0;
@@ -277,12 +265,12 @@ body {
 .branding-bg {
 	position: relative;
 	display: flex;
-	flex-direction: column; /* Stack vertically */
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	min-height: 100vh;
+	padding: 4rem 2rem;
 	overflow: hidden;
-	margin: 0;
 	background: radial-gradient(
 		circle at center,
 		#3d3dff 0%,
@@ -293,7 +281,7 @@ body {
 
 .branding-curve {
 	position: absolute;
-	right: 120vh;
+	right: 65%;
 	top: 35%;
 	width: 100%;
 	max-width: 800px;
@@ -307,35 +295,36 @@ body {
 	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
 	font-size: 4rem;
 	text-align: center;
-	margin: 0;
+	margin-bottom: 4rem;
 }
 
+/* FIXED: 3 columns on desktop */
 .branding-projects {
-	background: #181a2b;
-	border-radius: 1.2rem;
-	box-shadow: 0 4px 32px rgba(8, 0, 255, 0.267);
-	padding: 2rem 1rem; /* Reduced padding */
-	text-align: center;
-	margin-bottom: 8vh;
-	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+	z-index: 2;
 }
 
 .branding-project {
 	background: #181a2b;
 	border-radius: 1.2rem;
 	box-shadow: 0 4px 32px rgba(8, 0, 255, 0.267);
-	padding: 7rem 1rem;
+	padding: 2rem 1rem;
 	text-align: center;
-	margin-bottom: 8vh;
+	width: 100%;
 }
 
 .project-img {
 	width: 100%;
 	max-width: 300px;
 	height: 180px;
-	object-fit: contain; /* Changed from cover to contain */
+	object-fit: contain;
 	border-radius: 0.8rem;
-	margin: 0 auto 1rem auto; /* Center the image */
+	margin: 0 auto 1rem auto;
 	background: #222;
 	display: block;
 }
@@ -357,12 +346,7 @@ body {
 	gap: 0.7rem;
 	flex-wrap: wrap;
 }
-.ui-programs {
-	display: flex;
-	justify-content: center;
-	gap: 0.7rem;
-	flex-wrap: wrap;
-}
+
 .project-programs span {
 	background: #20199b;
 	color: #fff;
@@ -372,27 +356,31 @@ body {
 	font-size: 1rem;
 	letter-spacing: 1px;
 }
+
+/* ===== UI/UX SECTION ===== */
 .ui-bg {
 	position: absolute;
 	width: 100%;
+	max-width: 1200px;
 	z-index: 1;
-	opacity: 0.2;
-	top: -30vh;
+	opacity: 0.15;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
 }
-/* Phone project grid */
+
 .ui-projects {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-template-columns: repeat(3, 1fr);
 	gap: 3rem;
 	justify-items: center;
-	margin: 5rem auto 0 auto; /* Center with auto margins */
+	margin: 0 auto;
 	width: 100%;
 	max-width: 1200px;
 	z-index: 2;
 	padding: 0 2rem;
 }
 
-/* Individual phone card */
 .phone-card {
 	background: rgba(24, 26, 43, 0.9);
 	border-radius: 1.5rem;
@@ -401,7 +389,7 @@ body {
 	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 	transition: box-shadow 0.3s ease;
 	cursor: pointer;
-	width: 100%; /* Take full grid cell width */
+	width: 100%;
 	max-width: 350px;
 }
 
@@ -409,17 +397,15 @@ body {
 	box-shadow: 0 12px 40px rgba(0, 162, 237, 0.6);
 }
 
-/* Phone image */
 .phone-img {
 	width: 100%;
 	max-width: 260px;
 	height: auto;
-	margin: 0 auto 1rem auto; /* Center the image */
+	margin: 0 auto 1rem auto;
 	border-radius: 1rem;
 	display: block;
 }
 
-/* Phone title */
 .phone-card h3 {
 	color: #fff;
 	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
@@ -427,7 +413,6 @@ body {
 	margin-top: 0.5rem;
 }
 
-/* Phone description */
 .phone-desc {
 	color: #bbb;
 	font-size: 0.95rem;
@@ -436,26 +421,7 @@ body {
 	padding: 0 0.5rem;
 }
 
-.coding-section .coding-bg-long {
-	position: absolute;
-	top: -10px;
-	left: 60px;
-	width: 346px;
-	opacity: 0.3;
-	z-index: 0;
-	rotate: 1deg;
-}
-
-.coding-section .coding-bg-star {
-	position: absolute;
-	bottom: 60px;
-	right: 120px;
-	width: 120px;
-	opacity: 0.4;
-	z-index: 0;
-	top: 100vh;
-}
-/* Coding Section */
+/* ===== CODING SECTION ===== */
 .coding-section {
 	background: #111217;
 	padding: 6rem 2rem;
@@ -464,31 +430,48 @@ body {
 	position: relative;
 }
 
+.coding-section .coding-bg-long {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 250px;
+	opacity: 0.3;
+	z-index: 0;
+	rotate: 1deg;
+}
+
+.coding-section .coding-bg-star {
+	position: absolute;
+	bottom: 10%;
+	right: 5%;
+	width: 120px;
+	opacity: 0.4;
+	z-index: 0;
+}
+
 .coding-title {
 	font-size: 3rem;
 	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
 	margin-bottom: 4rem;
 }
 
-/* Grid for coding projects (2 items) */
 .coding-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-template-columns: repeat(2, 1fr);
 	gap: 3rem;
-	max-width: 1000px;
+	max-width: 1100px;
 	margin: 0 auto;
-	justify-items: center; /* Center items */
+	justify-items: center;
 	padding: 0 2rem;
 }
 
-/* Each project card */
 .coding-card {
 	background: rgba(24, 26, 43, 0.9);
 	border-radius: 1.5rem;
 	padding: 2rem 1rem;
 	box-shadow: 0 6px 28px rgba(0, 0, 0, 0.4);
 	transition: box-shadow 0.3s ease;
-	width: 100%; /* Take full grid cell width */
+	width: 100%;
 	max-width: 500px;
 }
 
@@ -501,7 +484,7 @@ body {
 	max-width: 420px;
 	height: auto;
 	border-radius: 1rem;
-	margin: 0 auto 1rem auto; /* Center the image */
+	margin: 0 auto 1rem auto;
 	display: block;
 }
 
@@ -517,107 +500,7 @@ body {
 	line-height: 1.5;
 	margin-top: 0.5rem;
 }
-/* 3D Section */
-.threeD-section {
-	background: #111217;
-	padding: 6rem 2rem;
-	text-align: center;
-	color: #fff;
-	position: relative;
-}
 
-.threeD-title {
-	font-size: 3rem;
-	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
-	margin-bottom: 4rem;
-}
-
-/* Grid for 3D projects (2 items) */
-.threeD-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	gap: 3rem;
-	max-width: 1000px;
-	margin: 0 auto;
-	justify-items: center; /* Center items */
-	padding: 0 2rem;
-}
-
-/* Each 3D project card */
-.threeD-card {
-	background: rgba(24, 26, 43, 0.9);
-	border-radius: 1.5rem;
-	padding: 2rem 1rem;
-	box-shadow: 0 6px 28px rgba(0, 0, 0, 0.4);
-	transition: box-shadow 0.3s ease;
-	z-index: 3;
-	width: 100%; /* Take full grid cell width */
-	max-width: 500px;
-}
-
-.threeD-card:hover {
-	box-shadow: 0 12px 40px rgba(0, 162, 237, 0.6);
-}
-
-.threeD-img {
-	width: 100%;
-	max-width: 420px;
-	height: auto;
-	border-radius: 1rem;
-	margin: 0 auto 1rem auto; /* Center the image */
-	display: block;
-}
-
-.threeD-card h3 {
-	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
-	font-size: 1.4rem;
-	margin-top: 0.5rem;
-}
-
-.threeD-desc {
-	color: #bbb;
-	font-size: 0.95rem;
-	line-height: 1.5;
-	margin-top: 0.5rem;
-}
-
-/* Tools badges */
-.threeD-tools {
-	margin-top: 1rem;
-	display: flex;
-	justify-content: center;
-	gap: 0.6rem;
-	flex-wrap: wrap;
-}
-
-.threeD-tools span {
-	background: #20199b;
-	color: #fff;
-	padding: 0.4rem 0.8rem;
-	border-radius: 0.7rem;
-	font-size: 0.9rem;
-	font-weight: bold;
-	letter-spacing: 0.5px;
-}
-.three-shape {
-	position: absolute;
-	width: 40%;
-	z-index: 1;
-	opacity: 0.2;
-	top: 703vh;
-	left: 130vh;
-}
-/* Shared hover glow for all cards */
-.branding-project:hover,
-.phone-card:hover,
-.coding-card:hover,
-.threeD-card:hover {
-	box-shadow: 0 12px 40px rgba(0, 162, 237, 0.6);
-	transform: translateY(-5px);
-	transition: all 0.3s ease;
-}
-
-/* Coding tools badges */
 .coding-tools {
 	margin-top: 1rem;
 	display: flex;
@@ -636,7 +519,85 @@ body {
 	letter-spacing: 0.5px;
 }
 
-/* Ensure 3D tools badges are consistent */
+/* ===== 3D SECTION ===== */
+.threeD-section {
+	background: #111217;
+	padding: 6rem 2rem;
+	text-align: center;
+	color: #fff;
+	position: relative;
+}
+
+.three-shape {
+	position: absolute;
+	width: 350px;
+	z-index: 1;
+	opacity: 0.2;
+	bottom: 15%;
+	right: 10%;
+}
+
+.threeD-title {
+	font-size: 3rem;
+	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
+	margin-bottom: 4rem;
+}
+
+.threeD-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3rem;
+	max-width: 1100px;
+	margin: 0 auto;
+	justify-items: center;
+	padding: 0 2rem;
+}
+
+.threeD-card {
+	background: rgba(24, 26, 43, 0.9);
+	border-radius: 1.5rem;
+	padding: 2rem 1rem;
+	box-shadow: 0 6px 28px rgba(0, 0, 0, 0.4);
+	transition: box-shadow 0.3s ease;
+	z-index: 3;
+	width: 100%;
+	max-width: 500px;
+}
+
+.threeD-card:hover {
+	box-shadow: 0 12px 40px rgba(0, 162, 237, 0.6);
+}
+
+.threeD-img {
+	width: 100%;
+	max-width: 420px;
+	height: auto;
+	border-radius: 1rem;
+	margin: 0 auto 1rem auto;
+	display: block;
+}
+
+.threeD-card h3 {
+	font-family: "Luckiest Guy", cursive, Arial, sans-serif;
+	font-size: 1.4rem;
+	margin-top: 0.5rem;
+}
+
+.threeD-desc {
+	color: #bbb;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	margin-top: 0.5rem;
+}
+
+.threeD-tools {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+	gap: 0.6rem;
+	flex-wrap: wrap;
+}
+
 .threeD-tools span {
 	background: #20199b;
 	color: #fff;
@@ -645,22 +606,12 @@ body {
 	font-size: 0.9rem;
 	font-weight: bold;
 	letter-spacing: 0.5px;
-	display: inline-block;
 }
 
-/* Smooth transitions on cards */
-.branding-project,
-.phone-card,
-.coding-card,
-.threeD-card {
-	transition: all 0.3s ease-in-out;
-}
-/*contact section*/
-/* Add to App.css */
-
+/* ===== CONTACT SECTION ===== */
 .contact-section {
 	background: #111217;
-	padding: 4rem 2rem; /* Add horizontal padding */
+	padding: 4rem 2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -731,22 +682,33 @@ body {
 	font-weight: bold;
 	text-align: center;
 }
-#contact {
-	background-color: black;
+
+/* Shared hover effects */
+.branding-project:hover,
+.phone-card:hover,
+.coding-card:hover,
+.threeD-card:hover {
+	box-shadow: 0 12px 40px rgba(0, 162, 237, 0.6);
+	transform: translateY(-5px);
+	transition: all 0.3s ease;
 }
 
-/* Responsive Styles */
-/* Responsive Design - Media Queries */
+.branding-project,
+.phone-card,
+.coding-card,
+.threeD-card {
+	transition: all 0.3s ease-in-out;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 
 /* Tablets and smaller laptops (max-width: 1024px) */
 @media (max-width: 1024px) {
-	/* Navigation */
 	.navbar ul {
 		gap: 1rem;
 		font-size: 0.9rem;
 	}
 
-	/* Home section images - adjust positions */
 	.image:nth-of-type(1) {
 		left: 60vw;
 		width: 60%;
@@ -768,7 +730,6 @@ body {
 		width: 12%;
 	}
 
-	/* Home content */
 	.portfolio-content h1 {
 		font-size: 2.5rem;
 	}
@@ -777,7 +738,6 @@ body {
 		font-size: 1.5rem;
 	}
 
-	/* About section */
 	.about-grid {
 		gap: 2rem;
 	}
@@ -788,53 +748,47 @@ body {
 	}
 
 	.about-avatar .MeUnderPicture {
-		width: 80vh;
-		height: 80vh;
-		top: 120vh;
-		right: 20vw;
+		width: 500px;
+		height: 500px;
 	}
 
 	.cube {
-		width: 25%;
-		left: 5vw;
+		width: 120px;
 	}
 
 	.long2 {
-		width: 35%;
+		width: 250px;
 	}
 
-	/* Branding section */
 	.branding-title,
 	.coding-title,
 	.threeD-title {
 		font-size: 3rem;
 	}
 
+	/* Branding stays 2 columns on tablets */
 	.branding-projects {
 		grid-template-columns: repeat(2, 1fr);
-		gap: 3rem;
+		gap: 2.5rem;
 	}
 
 	.branding-curve {
-		right: 80vh;
+		right: 55%;
+		max-width: 600px;
 	}
 
-	/* UI/UX projects */
 	.ui-projects {
-		padding-right: 50px;
+		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
 	}
 
-	/* 3D shape */
 	.three-shape {
-		width: 50%;
-		left: 80vh;
+		width: 250px;
 	}
 }
 
 /* Tablets portrait and large phones (max-width: 768px) */
 @media (max-width: 768px) {
-	/* Navigation - make it smaller */
 	.navbar {
 		padding: 0.8rem;
 	}
@@ -845,7 +799,6 @@ body {
 		flex-wrap: wrap;
 	}
 
-	/* Home section */
 	.portfolio-bg {
 		height: 80vh;
 		padding: 1rem;
@@ -859,7 +812,6 @@ body {
 		font-size: 1.2rem;
 	}
 
-	/* Hide decorative images on mobile */
 	.image:nth-of-type(1),
 	.image:nth-of-type(2) {
 		display: none;
@@ -870,9 +822,10 @@ body {
 		width: 15%;
 	}
 
-	/* About section */
+	/* About section mobile */
 	.about-section {
 		text-align: center;
+		padding: 3rem 1.5rem;
 	}
 
 	.about-grid {
@@ -883,13 +836,15 @@ body {
 	.about-left,
 	.about-right {
 		min-width: 100%;
-	}
-	.about-left {
 		align-items: center;
 		text-align: center;
 	}
+
+	.about-left {
+		align-items: center;
+	}
+
 	.about-right {
-		text-align: center;
 		margin-top: 20px;
 	}
 
@@ -899,26 +854,13 @@ body {
 	}
 
 	.about-avatar .MeUnderPicture {
-		width: 110vh;
-		height: 110vh;
-		position: absolute;
-		top: 132vh;
-		right: 30vw;
-		z-index: -1;
-		opacity: 0.1;
-		rotate: -2deg;
-		pointer-events: none;
+		width: 400px;
+		height: 400px;
 	}
 
 	.cube,
 	.long2 {
 		display: none;
-	}
-	.about-education,
-	.about-skills,
-	.about-languages,
-	.about-softwares {
-		text-align: center;
 	}
 
 	.h2-star {
@@ -927,23 +869,15 @@ body {
 
 	.skills-list {
 		grid-template-columns: 1fr;
-		text-align: center;
 	}
 
 	.software {
-		width: 100%;
 		max-width: 300px;
-		position: relative;
 	}
 
-	/* Branding section */
-	.section {
-		height: auto;
-		padding: 3rem 1.5rem;
-	}
-
+	/* Branding section - 1 column on mobile */
 	.branding-bg {
-		height: auto;
+		min-height: auto;
 		padding: 3rem 1.5rem;
 	}
 
@@ -960,21 +894,18 @@ body {
 	.branding-projects {
 		grid-template-columns: 1fr;
 		gap: 2rem;
-		margin-top: 40px;
 		padding: 0 1rem;
 	}
 
 	.branding-project {
-		padding: 2rem 1rem;
-		margin-bottom: 4vh;
 		max-width: 100%;
 	}
 
-	/* UI/UX section */
+	/* UI/UX - 1 column on mobile */
 	.ui-projects {
-		padding: 0 1rem;
+		grid-template-columns: 1fr;
 		gap: 2rem;
-		margin-top: 3rem;
+		padding: 0 1rem;
 	}
 
 	.ui-bg {
@@ -991,8 +922,7 @@ body {
 		display: none;
 	}
 
-	.coding-grid,
-	.threeD-grid {
+	.coding-grid {
 		grid-template-columns: 1fr;
 		gap: 2rem;
 		padding: 0 1rem;
@@ -1010,9 +940,10 @@ body {
 	.threeD-grid {
 		grid-template-columns: 1fr;
 		gap: 2rem;
+		padding: 0 1rem;
 	}
 
-	/* Contact section */
+	/* Contact */
 	.contact-section {
 		padding: 3rem 1.5rem;
 	}
@@ -1029,29 +960,11 @@ body {
 
 /* Mobile phones (max-width: 480px) */
 @media (max-width: 480px) {
-	about-section,
-	.coding-section,
-	.threeD-section {
-		padding: 3rem 1rem;
-	}
-
-	.branding-projects,
-	.ui-projects,
-	.coding-grid,
-	.threeD-grid {
-		padding: 0 0.5rem;
-	}
-	/* Navigation */
 	.navbar ul {
 		gap: 0.5rem;
 		font-size: 0.75rem;
 	}
 
-	.navbar ul li a {
-		padding: 0.3rem;
-	}
-
-	/* Home section */
 	.portfolio-content h1 {
 		font-size: 1.8rem;
 	}
@@ -1060,45 +973,45 @@ body {
 		font-size: 1rem;
 	}
 
-	/* About section */
+	.about-section {
+		padding: 2rem 1rem;
+	}
+
 	.about-avatar .avatarMe {
 		width: 180px;
 		height: 180px;
 	}
 
 	.about-avatar .MeUnderPicture {
-		width: 50vh;
-		height: 50vh;
-		top: 105vh;
+		width: 350px;
+		height: 350px;
 	}
 
 	.about-right h1 {
 		font-size: 2rem;
 	}
 
-	/* Branding, Coding, 3D titles */
 	.branding-title,
 	.coding-title,
 	.threeD-title {
 		font-size: 2rem;
 	}
 
-	/* Project cards */
+	.branding-projects,
+	.ui-projects,
+	.coding-grid,
+	.threeD-grid {
+		padding: 0 0.5rem;
+		gap: 1.5rem;
+	}
+
 	.branding-project,
 	.phone-card,
 	.coding-card,
 	.threeD-card {
-		padding: 2rem 0.8rem;
+		padding: 1.5rem 0.8rem;
 	}
 
-	.project-img,
-	.phone-img,
-	.coding-img,
-	.threeD-img {
-		max-width: 100%;
-	}
-
-	/* Contact */
 	.contact-title {
 		font-size: 1.8rem;
 	}
@@ -1108,16 +1021,16 @@ body {
 	}
 }
 
-/* Large screens (min-width: 1920px) - optional enhancements */
+/* Large screens (min-width: 1920px) */
 @media (min-width: 1920px) {
-	.about-avatar .MeUnderPicture {
-		right: 35vw;
-	}
-
 	.branding-projects,
 	.ui-projects,
 	.coding-grid,
 	.threeD-grid {
 		max-width: 1400px;
+	}
+
+	.branding-curve {
+		max-width: 1000px;
 	}
 }
