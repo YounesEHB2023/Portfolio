@@ -1017,6 +1017,7 @@ body {
 		max-width: 1000px;
 	}
 }
+
 /*NEW CONTACT*/
 /* General container styling */
 .container {
@@ -1029,7 +1030,7 @@ body {
 }
 
 /* Section title */
-h2 {
+.container h2 {
 	font-size: 24px;
 	margin-bottom: 20px;
 	color: #333;
@@ -1085,4 +1086,39 @@ button:hover {
 /* Form spacing */
 .form-group {
 	margin-bottom: 15px;
+}
+
+/* Ensure main site headings are readable but not too heavy */
+.branding-title,
+.coding-title,
+.threeD-title,
+.portfolio-content h1,
+.portfolio-content h2,
+.about-right h1,
+.about-education h2,
+.about-skills h2,
+.about-languages h2,
+.about-softwares h2,
+.contact-title,
+.branding-project h3,
+.phone-card h3,
+.coding-card h3,
+.threeD-card h3 {
+	color: #ffffff;
+	/* use a lighter visual weight, many display fonts ignore numeric weight—use transform + subtle shadow */
+	font-weight: 500;
+	letter-spacing: 0.6px;
+	text-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+}
+
+/* Slightly smaller shadow on small screens so headings don't look too bold */
+@media (max-width: 768px) {
+	.branding-title,
+	.coding-title,
+	.threeD-title,
+	.portfolio-content h1,
+	.portfolio-content h2 {
+		text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+		font-weight: 500;
+	}
 }

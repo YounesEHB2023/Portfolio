@@ -37,7 +37,7 @@ function App() {
 			<UiUx />
 			<Coding />
 			<ThreeD />
-			<Contact />
+			{/* <Contact /> */}
 		</div>
 	);
 }
