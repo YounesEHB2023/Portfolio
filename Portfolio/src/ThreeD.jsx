@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useSpring, animated } from "@react-spring/web";
 import threeD1 from "./assets/images/house.jpg";
@@ -44,7 +44,7 @@ function ThreeDCard({ image, title, description, tools }) {
 			>
 				<img src={image} alt={title} className="threeD-img" />
 			</animated.div>
-			<h3>{title}</h3>
+			<h3 className="chrome-text">{title}</h3>
 			<p className="threeD-desc">{description}</p>
 			<div className="threeD-tools">
 				{tools.map((tool, index) => (
@@ -63,13 +63,17 @@ function ThreeDCard({ image, title, description, tools }) {
 }
 
 function ThreeD() {
+	const [showShine, setShowShine] = useState(false);
+
 	return (
 		<section className="threeD-section" id="3d">
 			<motion.h2
-				className="threeD-title"
+				className={`threeD-title chrome-text ${showShine ? "play-shine" : ""}`}
 				initial={{ opacity: 0, y: -40 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.7 }}
+				viewport={{ once: true }}
+				onViewportEnter={() => setShowShine(true)}
 			>
 				3D Projects
 			</motion.h2>

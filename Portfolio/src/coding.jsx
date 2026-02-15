@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useSpring, animated } from "@react-spring/web";
 import coding1 from "./assets/images/code1.png";
 import coding2 from "./assets/images/code2.png";
 
-import Long from "./assets/images/ShapeLong.png";
-import Star from "./assets/images/arrow_shape.png";
+// import Long from "./assets/images/ShapeLong.png";
+// import Star from "./assets/images/arrow_shape.png";
 import "./App.css";
 
 function CodingCard({ image, title, description, tools }) {
@@ -46,7 +46,7 @@ function CodingCard({ image, title, description, tools }) {
 			>
 				<img src={image} alt={title} className="coding-img" />
 			</animated.div>
-			<h3>{title}</h3>
+			<h3 className="chrome-text">{title}</h3>
 			<p>{description}</p>
 			<div className="coding-tools">
 				{tools.map((tool, i) => (
@@ -58,15 +58,19 @@ function CodingCard({ image, title, description, tools }) {
 }
 
 function Coding() {
+	const [showShine, setShowShine] = useState(false);
+
 	return (
 		<section className="coding-section" id="coding">
-			<img className="image coding-bg-long" src={Long} alt="Long Shape" />
-			<img className="image coding-bg-star" src={Star} alt="Star Shape" />
+			{/* <img className="image coding-bg-long" src={Long} alt="Long Shape" />
+			<img className="image coding-bg-star" src={Star} alt="Star Shape" /> */}
 			<motion.h2
-				className="coding-title"
+				className={`coding-title chrome-text ${showShine ? "play-shine" : ""}`}
 				initial={{ opacity: 0, y: -30 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8 }}
+				viewport={{ once: true }}
+				onViewportEnter={() => setShowShine(true)}
 			>
 				Coding Projects
 			</motion.h2>

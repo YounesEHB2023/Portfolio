@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useSpring, animated } from "@react-spring/web";
 import "./App.css";
 
-import Me from "./assets/images/younes2.png";
-import cube from "./assets/images/shape_cube.png";
-import Long from "./assets/images/ShapeLong.png";
-import long2 from "./assets/images/LongShape2.png";
+import Me from "./assets/images/Me2.png";
+// import cube from "./assets/images/shape_cube.png";
+// import Long from "./assets/images/ShapeLong.png";
+// import long2 from "./assets/images/LongShape2.png";
 import star from "./assets/images/shape_otherstar.png";
 import softwares from "./assets/images/softwares.png";
 
@@ -15,6 +15,8 @@ function About() {
 		transform: "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)",
 		config: { mass: 5, tension: 350, friction: 40 },
 	}));
+
+	const [showShine, setShowShine] = useState(false);
 
 	const calc = (x, y, rect) => [
 		-(y - rect.top - rect.height / 2) / 20,
@@ -25,9 +27,14 @@ function About() {
 		`perspective(800px) rotateX(${x}deg) rotateY(${y}deg) scale(1.05)`;
 
 	return (
-		<section className="about-section" id="about">
-			<img className="cube" src={cube} alt="Cube Shape" />
-			<img className="long2" src={long2} alt="Long Shape" />
+		<section
+			className="about-section"
+			id="about"
+			onViewportEnter={() => setShowShine(true)}
+			viewport={{ once: true }}
+		>
+			{/* <img className="cube" src={cube} alt="Cube Shape" />
+			<img className="long2" src={long2} alt="Long Shape" /> */}
 
 			<div className="about-grid">
 				{/* Left Side */}
@@ -56,7 +63,7 @@ function About() {
 							}
 							style={props}
 						/>
-						<img className="MeUnderPicture" src={Long} alt="Long Shape" />
+						{/* <img className="MeUnderPicture" src={Long} alt="Long Shape" /> */}
 					</div>
 
 					<div className="about-education">
@@ -65,8 +72,8 @@ function About() {
 							<h2>Education</h2>
 						</div>
 						<p>
-							Multimedia and Creative Technology student at Erasmus College at
-							Campus Kaai in Brussels
+							Multimedia and Creative Technology student<br></br> at Erasmus
+							College at Campus Kaai in Brussels
 						</p>
 						<span className="about-years">2023-2026</span>
 					</div>
@@ -92,10 +99,11 @@ function About() {
 					className="about-right"
 					initial={{ opacity: 0, x: 50 }}
 					whileInView={{ opacity: 1, x: 0 }}
-					viewport={{ once: true, amount: 0.3 }}
 					transition={{ duration: 0.8, delay: 0.2 }}
 				>
-					<h1>Hello !</h1>
+					<h1 className={`chrome-text ${showShine ? "play-shine" : ""}`}>
+						Hello !
+					</h1>
 					<p>
 						My name is Younes Ben Ali, a creative graphic designer, 3D artist,
 						and coder with a strong eye for detail and a love for visual
@@ -127,10 +135,16 @@ function About() {
 								</strong>
 							</li>
 							<li>
-								French: <strong><span>C2</span></strong>
+								French:{" "}
+								<strong>
+									<span>C2</span>
+								</strong>
 							</li>
 							<li>
-								Arabic: <strong><span>A2</span></strong>
+								Arabic:{" "}
+								<strong>
+									<span>A2</span>
+								</strong>
 							</li>
 						</ul>
 					</div>

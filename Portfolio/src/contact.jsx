@@ -2,8 +2,17 @@ import React, { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { motion } from "framer-motion";
 import "./App.css";
+
+function sendEmailFromForm(setSubmitted) {
+	if (window.sendEmail) {
+		window.sendEmail();
+		setSubmitted(true);
+		setTimeout(() => setSubmitted(false), 3000);
+	}
+}
+
 function Contact() {
-	const [form, setForm] = useState({ name: "", email: "", message: "" });
+	const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
 	const [submitted, setSubmitted] = useState(false);
 
 	const fadeIn = useSpring({
@@ -18,9 +27,14 @@ function Contact() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setSubmitted(true);
-		setTimeout(() => setSubmitted(false), 3000);
-		setForm({ name: "", email: "", message: "" });
+		
+		document.getElementById("name").value = form.name;
+		document.getElementById("email").value = form.email;
+		document.getElementById("subject").value = form.subject;
+		document.getElementById("message").value = form.message;
+		
+		sendEmailFromForm(setSubmitted);
+		setForm({ name: "", email: "", subject: "", message: "" });
 	};
 
 	return (
@@ -53,6 +67,15 @@ function Contact() {
 					name="email"
 					placeholder="Your Email"
 					value={form.email}
+					onChange={handleChange}
+					required
+				/>
+				<input
+					id="subject"
+					type="text"
+					name="subject"
+					placeholder="Subject"
+					value={form.subject}
 					onChange={handleChange}
 					required
 				/>

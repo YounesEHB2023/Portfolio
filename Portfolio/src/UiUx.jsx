@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
+import { motion } from "framer-motion";
 import "./App.css";
 
 // Import your 3 UI/UX design images
 import uiux1 from "./assets/images/grow.png";
 import uiux2 from "./assets/images/design.png";
 import uiux3 from "./assets/images/fullprojects.png";
-import uiux from "./assets/images/uiux.png";
+import phone1 from "./assets/images/phone1.png";
+import phone2 from "./assets/images/phone2.png";
 function PhoneCard({ image, title, description }) {
 	const [props, set] = useSpring(() => ({
 		transform: "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)",
@@ -36,19 +38,27 @@ function PhoneCard({ image, title, description }) {
 			}
 			style={props}
 		>
-			<img src={image} alt={title} className="phone-img" />
-			<h3>{title}</h3>
+		<img src={image} alt={title} className="phone-img" />
+			<h3 className="chrome-text">{title}</h3>
 			<p className="phone-desc">{description}</p>
 		</animated.div>
 	);
 }
 
 function UiUx() {
+	const [showShine, setShowShine] = useState(false);
+
 	return (
 		<section className="branding-section" id="uiux">
 			<div className="branding-bg">
-				<img src={uiux} alt="Curve" className="ui-bg" />
-				<h2 className="branding-title">UI/UX Projects</h2>
+				{/* <img src={uiux} alt="Curve" className="ui-bg" /> */}
+				<motion.h2 
+					className={`branding-title chrome-text ${showShine ? "play-shine" : ""}`}
+					onViewportEnter={() => setShowShine(true)}
+					viewport={{ once: true }}
+				>
+					UI/UX Projects
+				</motion.h2>
 				<div className="ui-projects">
 					<PhoneCard
 						image={uiux1}
@@ -64,6 +74,11 @@ function UiUx() {
 						image={uiux3}
 						title="BIFFF guide"
 						description="A seperate app for the Brussels International Fantastic Film Festival (BIFFF) to help users navigate the event."
+					/>
+					<PhoneCard
+						image={phone1}
+						title="Music Player App"
+						description="A music player app where creativity has launched itself to a unique design!"
 					/>
 				</div>
 			</div>

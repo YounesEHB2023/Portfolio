@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { motion } from "framer-motion";
 import "./App.css";
 
-import Long from "./assets/images/ShapeLong.png";
+// import Long from "./assets/images/ShapeLong.png";
 import leglift from "./assets/images/leglift.png";
 import navisgo from "./assets/images/navisgo.png";
 import affiche from "./assets/images/affiche.png";
@@ -45,7 +45,7 @@ function BrandingCard({ image, title, description, programs }) {
 				style={props}
 			>
 				<img src={image} alt={title} className="project-img" />
-				<h3>{title}</h3>
+				<h3 className="chrome-text">{title}</h3>
 				<p>{description}</p>
 				<div className="project-programs">
 					{programs.map((tool, index) => (
@@ -58,10 +58,12 @@ function BrandingCard({ image, title, description, programs }) {
 }
 
 function Branding() {
+	const [showShine, setShowShine] = useState(false);
+
 	return (
 		<section className="branding-section" id="branding">
 			<div className="branding-bg">
-				<motion.img
+				{/* <motion.img
 					src={Long}
 					alt="Curve"
 					className="branding-curve"
@@ -69,13 +71,14 @@ function Branding() {
 					whileInView={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.8, ease: "easeOut" }}
 					viewport={{ once: true }}
-				/>
-				<motion.h2
-					className="branding-title"
+				/> */}
+			<motion.h2
+					className={`branding-title chrome-text ${showShine ? "play-shine" : ""}`}
 					initial={{ opacity: 0, y: -30 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, ease: "easeOut" }}
 					viewport={{ once: true }}
+					onViewportEnter={() => setShowShine(true)}
 				>
 					Branding
 				</motion.h2>
