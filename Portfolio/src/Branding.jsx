@@ -72,7 +72,7 @@ function Branding() {
 					transition={{ duration: 0.8, ease: "easeOut" }}
 					viewport={{ once: true }}
 				/> */}
-			<motion.h2
+				<motion.h2
 					className={`branding-title chrome-text ${showShine ? "play-shine" : ""}`}
 					initial={{ opacity: 0, y: -30 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ function Branding() {
 					image={affiche}
 					title="Flash Vision"
 					description="A poster that I made for a fictional website for an imaginary product."
-					programs={["XD", "Photoshop"]}
+					programs={["XD", "Photoshop", "Figma", "Illustrator"]}
 				/>
 			</div>
 		</section>

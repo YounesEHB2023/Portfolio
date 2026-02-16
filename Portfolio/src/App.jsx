@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/all";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useGSAP } from "@gsap/react";
 
 import Home from "./Home";
@@ -11,15 +12,20 @@ import Branding from "./Branding";
 import UiUx from "./UiUx";
 import Coding from "./coding";
 import ThreeD from "./ThreeD";
+import Extras from "./Extras";
 import Contact from "./contact";
+import hamburgerIcon from "./assets/images/hamburger.png";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 function App() {
 	const containerRef = useRef(null);
+	const [menuOpen, setMenuOpen] = useState(false);
+
+	const smootherRef = useRef(null);
 
 	useGSAP(() => {
-		ScrollSmoother.create({
+		smootherRef.current = ScrollSmoother.create({
 			smooth: 1.5,
 			effects: true,
 		});
@@ -36,13 +42,18 @@ function App() {
 		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 			anchor.addEventListener('click', function (e) {
 				e.preventDefault();
-				const target = document.querySelector(this.getAttribute('href'));
+				const targetId = this.getAttribute('href');
+				const target = document.querySelector(targetId);
 				if (target) {
-					gsap.to(window, {
-						duration: 1.2,
-						scrollTo: { y: target, offsetY: 80 },
-						ease: "power3.out"
-					});
+					if (smootherRef.current) {
+						smootherRef.current.scrollTo(target, true, "top 80px");
+					} else {
+						gsap.to(window, {
+							duration: 1.2,
+							scrollTo: { y: target, offsetY: 80 },
+							ease: "power3.out"
+						});
+					}
 				}
 			});
 		});
@@ -72,30 +83,36 @@ function App() {
 
 	return (
 		<div className="main-wrapper" ref={containerRef}>
+			<nav className="navbar">
+				<a href="#home" className="nav-logo">
+					<span className="logo-text">Y</span>
+					<span className="logo-shine"></span>
+				</a>
+				<button className="hamburger-btn" onClick={() => setMenuOpen(!menuOpen)}>
+					<img src={hamburgerIcon} alt="Menu" className="hamburger-icon" />
+				</button>
+				{menuOpen && <div className="mobile-overlay" onClick={() => setMenuOpen(false)} />}
+				<ul className={`nav-links ${menuOpen ? "nav-open" : ""}`}>
+					<li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
+					<li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
+					<li><a href="#branding" onClick={() => setMenuOpen(false)}>Branding</a></li>
+					<li><a href="#uiux" onClick={() => setMenuOpen(false)}>UI/UX</a></li>
+					<li><a href="#coding" onClick={() => setMenuOpen(false)}>Coding</a></li>
+					<li><a href="#threeD" onClick={() => setMenuOpen(false)}>3D</a></li>
+					<li><a href="#extras" onClick={() => setMenuOpen(false)}>Extra's</a></li>
+					<li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+				</ul>
+				<div className="nav-decoration"></div>
+			</nav>
 			<div id="smooth-wrapper">
 				<div id="smooth-content">
-					<nav className="navbar">
-						<a href="#home" className="nav-logo">
-							<span className="logo-text">Y</span>
-							<span className="logo-shine"></span>
-						</a>
-						<ul className="nav-links">
-							<li><a href="#home">Home</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#branding">Branding</a></li>
-							<li><a href="#uiux">UI/UX</a></li>
-							<li><a href="#coding">Coding</a></li>
-							<li><a href="#3d">3D</a></li>
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-						<div className="nav-decoration"></div>
-					</nav>
 					<Home />
 					<About />
 					<Branding />
 					<UiUx />
 					<Coding />
 					<ThreeD />
+					<Extras />
 					<Contact />
 				</div>
 			</div>

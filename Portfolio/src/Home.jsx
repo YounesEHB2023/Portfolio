@@ -60,8 +60,7 @@ const Home = () => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.9 }}
 				>
-					Multimedia & Creative Technology <br />
-					Student – Designer & Coder
+					Creative Developer, Digital Designer & 3D Artist
 				</motion.h2>
 			</motion.div>
 		</motion.div>

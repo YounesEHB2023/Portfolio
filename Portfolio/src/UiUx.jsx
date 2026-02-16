@@ -9,7 +9,8 @@ import uiux2 from "./assets/images/design.png";
 import uiux3 from "./assets/images/fullprojects.png";
 import phone1 from "./assets/images/phone1.png";
 import phone2 from "./assets/images/phone2.png";
-function PhoneCard({ image, title, description }) {
+import xenonAfter from "./assets/images/xenonAfter.png";
+function PhoneCard({ image, title, description, imageStyle }) {
 	const [props, set] = useSpring(() => ({
 		transform: "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)",
 		config: { mass: 5, tension: 350, friction: 40 },
@@ -38,7 +39,7 @@ function PhoneCard({ image, title, description }) {
 			}
 			style={props}
 		>
-		<img src={image} alt={title} className="phone-img" />
+		<img src={image} alt={title} className="phone-img" style={imageStyle} />
 			<h3 className="chrome-text">{title}</h3>
 			<p className="phone-desc">{description}</p>
 		</animated.div>
@@ -79,6 +80,12 @@ function UiUx() {
 						image={phone1}
 						title="Music Player App"
 						description="A music player app where creativity has launched itself to a unique design!"
+					/>
+					<PhoneCard
+						image={xenonAfter}
+						title="Xenon Restaurant"
+						description="Redesign of a restaurant in Ninove called Xenon and coded it afterwords"
+						imageStyle={{ maxWidth: "207px" }}
 					/>
 				</div>
 			</div>

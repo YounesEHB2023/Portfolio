@@ -4,6 +4,7 @@ import { useSpring, animated } from "@react-spring/web";
 import threeD1 from "./assets/images/house.jpg";
 import threeD2 from "./assets/images/patrick.jpg";
 import threeD3 from "./assets/images/3d.png";
+import donutDone from "./assets/images/DonutDONE.png";
 import "./App.css";
 
 function ThreeDCard({ image, title, description, tools }) {
@@ -66,7 +67,7 @@ function ThreeD() {
 	const [showShine, setShowShine] = useState(false);
 
 	return (
-		<section className="threeD-section" id="3d">
+		<section className="threeD-section" id="threeD">
 			<motion.h2
 				className={`threeD-title chrome-text ${showShine ? "play-shine" : ""}`}
 				initial={{ opacity: 0, y: -40 }}
@@ -83,13 +84,19 @@ function ThreeD() {
 					image={threeD1}
 					title="Modern house"
 					description="A 3D render of a modern house setup with glowing effects."
-					tools={["Blender", "Substance Painter", "Photoshop"]}
+					tools={["Maya", "Substance Painter"]}
 				/>
 				<ThreeDCard
 					image={threeD2}
 					title="Character 3D modeling"
 					description="A 3D-model of patrick star, used in a later video animation project."
-					tools={["Cinema4D", "After Effects", "Illustrator"]}
+					tools={["Maya", "Substance Painter", "Unity"]}
+				/>
+				<ThreeDCard
+					image={donutDone}
+					title="Donut"
+					description="First project of Blender where i follewed a tutorial to make a donut, and then i added my own touch."
+					tools={["Blender"]}
 				/>
 			</div>
 		</section>
